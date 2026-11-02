@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kevin Hu, pianist and composer: compositions and performance recordings.">
+<title>Kevin Hu Music</title>
+<style>
+:root {
+  --bg: #ffffff;
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --rule: #e2e2e2;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #121212; --ink: #ececec; --muted: #9a9a9a; --rule: #2c2c2c; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #121212; --ink: #ececec; --muted: #9a9a9a; --rule: #2c2c2c; color-scheme: dark; }
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 1rem; line-height: 1.5;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.wrap { max-width: 52rem; margin: 0 auto; padding-block: 3rem 4rem; }
+h1 { font-family: var(--serif); font-weight: 400; font-size: 2.6rem; margin: 0; }
+.lead { color: var(--muted); margin: 0.3rem 0 0; }
+nav { display: flex; gap: 1.25rem; margin-top: 1rem; font-size: 0.95rem; }
+nav a { color: var(--muted); }
+h2 { font-family: var(--serif); font-weight: 400; font-size: 1.6rem; margin: 3rem 0 0.5rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--ink); }
+.piece { padding-block: 1.1rem; border-bottom: 1px solid var(--rule); display: grid; gap: 0.5rem; scroll-margin-top: 1rem; }
+.piece h3 { font-family: var(--serif); font-weight: 400; font-size: 1.2rem; margin: 0; }
+.piece p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+audio { width: 100%; height: 40px; }
+.videos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 1.5rem; margin-top: 1.25rem; }
+.video { display: grid; gap: 0.5rem; min-width: 0; scroll-margin-top: 1rem; }
+.video h3 { font-family: var(--serif); font-weight: 400; font-size: 1.15rem; margin: 0; }
+.video p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.frame { position: relative; aspect-ratio: 16 / 9; max-width: 100%; background: #000; }
+.frame video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; background: #000; }
+footer { margin-top: 3rem; color: var(--muted); font-size: 0.8rem; }
+footer p { margin: 0.25rem 0; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+@media (max-width: 640px) { .videos { grid-template-columns: minmax(0, 1fr); } h1 { font-size: 2.1rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Kevin Hu</h1>
+    <p class="lead">Pianist and composer</p>
+    <nav aria-label="Sections"><a href="#compositions">Compositions</a><a href="#performances">Performances</a></nav>
+  </header>
+
+  <section id="compositions" aria-labelledby="comp-h">
+    <h2 id="comp-h">Compositions</h2>
+
+    <div class="piece" id="concerto">
+      <h3>Piano Concerto No. 1 in D minor, “Rage over lost love”: I.</h3>
+      <p>Romantic · Piano, violins and cellos</p>
+      <audio controls preload="none" src="audio/piano-concerto-1.mp3"></audio>
+    </div>
+    <div class="piece" id="beethoven">
+      <h3>Variations on Beethoven’s Seventh Symphony</h3>
+      <p>Classical · Two pianos</p>
+      <audio controls preload="none" src="audio/beethoven-variations.mp3"></audio>
+    </div>
+    <div class="piece" id="allegro">
+      <h3>Allegro in B♭</h3>
+      <p>Classical · Piano</p>
+      <audio controls preload="none" src="audio/allegro-in-bb.mp3"></audio>
+    </div>
+    <div class="piece" id="lullaby">
+      <h3>Lullaby in A♭</h3>
+      <p>Romantic · Piano</p>
+      <audio controls preload="none" src="audio/lullaby-in-ab.mp3"></audio>
+    </div>
+    <div class="piece" id="impromptu">
+      <h3>Impromptu in E♭</h3>
+      <p>Romantic · Piano</p>
+      <audio controls preload="none" src="audio/impromptu-in-eb.mp3"></audio>
+    </div>
+    <div class="piece" id="drift">
+      <h3>Drift</h3>
+      <p>Minimalist · Two pianos</p>
+      <audio controls preload="none" src="audio/drift.mp3"></audio>
+    </div>
+  </section>
+
+  <section id="performances" aria-labelledby="perf-h">
+    <h2 id="perf-h">Performances</h2>
+    <div class="videos">
+      <div class="video" id="torrent">
+        <div class="frame"><video controls preload="none" playsinline poster="video/torrent.jpg" src="video/torrent.mp4"></video></div>
+        <h3>Chopin: Étude Op. 10 No. 4 “Torrent”</h3>
+        <p>Romantic · 2025</p>
+      </div>
+      <div class="video" id="rigoletto">
+        <div class="frame"><video controls preload="none" playsinline poster="video/rigoletto.jpg" src="video/rigoletto.mp4"></video></div>
+        <h3>Liszt: Rigoletto Paraphrase, S. 434</h3>
+        <p>Romantic · 2023</p>
+      </div>
+      <div class="video" id="campanella">
+        <div class="frame"><video controls preload="none" playsinline poster="video/campanella.jpg" src="video/campanella.mp4"></video></div>
+        <h3>Liszt: La Campanella, S. 141 No. 3</h3>
+        <p>Romantic · 2023</p>
+      </div>
+      <div class="video" id="gargoyles">
+        <div class="frame"><video controls preload="none" playsinline poster="video/gargoyles.jpg" src="video/gargoyles.mp4"></video></div>
+        <h3>Liebermann: Gargoyles, Op. 29 No. 1</h3>
+        <p>Contemporary · 2024</p>
+      </div>
+      <div class="video" id="bach-855">
+        <div class="frame"><video controls preload="none" playsinline poster="video/bwv855.jpg" src="video/bwv855.mp4"></video></div>
+        <h3>Bach: Prelude and Fugue in E minor, BWV 855</h3>
+        <p>Baroque · 2022</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Composition audio is rendered from the scores. Piano samples: Salamander Grand Piano by Alexander Holm, CC BY 3.0.</p>
+    <p>© Kevin Hu</p>
+  </footer>
+</div>
+
+<script>
+document.addEventListener('play', e => document.querySelectorAll('audio, video').forEach(m => { if (m !== e.target) m.pause(); }), true);
+</script>
+</body>
+</html>
